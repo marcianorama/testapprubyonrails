@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   #root :to => 'home#index'
   root 'pages#home'
   get '/about', to: 'pages#about'
-
+  get 'pages/home', to:'pages#home'
   resources :todos
 end
