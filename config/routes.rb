@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/about', to: 'pages#about'
   get 'pages/home', to:'pages#home'
+
+  #recipes url
+  get '/recipes', to:'recipes#index'
   resources :todos
 end
