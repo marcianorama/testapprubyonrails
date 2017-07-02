@@ -7,5 +7,10 @@ Rails.application.routes.draw do
 
   #recipes url
   get '/recipes', to:'recipes#index'
+  get 'recipes/new', to:'recipes#new', as:'new_recipe'
+  get 'recipes/:id', to:'recipes#show', as:'recipe'
+  post '/recipes',to:'recipes#create'
+
+
   resources :todos
 end
